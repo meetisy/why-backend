@@ -19,9 +19,6 @@
     -->
     id, order, rise, title, image_url
   </sql>
-  <select id="getHotQuestionList" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-    select * from hot_question limit 15;
-  </select>
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     <!--
       WARNING - @mbg.generated
@@ -31,6 +28,9 @@
     <include refid="Base_Column_List" />
     from hot_question
     where id = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="getHotQuestionList" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select * from hot_question limit 15;
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     <!--
@@ -125,4 +125,7 @@
       image_url = #{imageUrl,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
+  <select id="getHotQuestionList" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select * from hot_question limit 15;
+  </select>
 </mapper>

@@ -3,12 +3,9 @@ package com.example.whybackend.controller;
 import com.example.whybackend.service.impl.HotQuestionImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 import java.util.List;
 @RestController
-public class UserController {
+public class HotQuestionController {
     @Autowired
     private HotQuestionImpl hotQuestionService;
     @ResponseBody
