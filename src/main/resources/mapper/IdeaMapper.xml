@@ -100,4 +100,7 @@
       image_url = #{imageUrl,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
+  <select id="getIdeaList" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select * from idea limit 4;
+  </select>
 </mapper>
